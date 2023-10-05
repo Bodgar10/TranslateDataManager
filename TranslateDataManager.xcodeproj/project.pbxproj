@@ -11,6 +11,9 @@
 		8787337C2ACE2D81005BF7DD /* TranslateDataManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 878733712ACE2D81005BF7DD /* TranslateDataManager.framework */; };
 		878733812ACE2D81005BF7DD /* TranslateDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878733802ACE2D81005BF7DD /* TranslateDataManagerTests.swift */; };
 		878733822ACE2D81005BF7DD /* TranslateDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 878733742ACE2D81005BF7DD /* TranslateDataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		878733992ACE2DD8005BF7DD /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878733982ACE2DD8005BF7DD /* UserViewModel.swift */; };
+		87EF28992ACE3A44001E47CC /* TranslateServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87EF28842ACE39A4001E47CC /* TranslateServices.framework */; platformFilter = ios; };
+		87EF289A2ACE3A44001E47CC /* TranslateServices.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87EF28842ACE39A4001E47CC /* TranslateServices.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -21,7 +24,35 @@
 			remoteGlobalIDString = 878733702ACE2D81005BF7DD;
 			remoteInfo = TranslateDataManager;
 		};
+		87EF28832ACE39A4001E47CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87EF287E2ACE39A4001E47CC /* TranslateServices.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 87EF28642ACE3992001E47CC;
+			remoteInfo = TranslateServices;
+		};
+		87EF28852ACE39A4001E47CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87EF287E2ACE39A4001E47CC /* TranslateServices.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 87EF286E2ACE3992001E47CC;
+			remoteInfo = TranslateServicesTests;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		87EF289B2ACE3A44001E47CC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				87EF289A2ACE3A44001E47CC /* TranslateServices.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		878733712ACE2D81005BF7DD /* TranslateDataManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TranslateDataManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,6 +60,8 @@
 		878733752ACE2D81005BF7DD /* TranslateDataManager.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = TranslateDataManager.docc; sourceTree = "<group>"; };
 		8787337B2ACE2D81005BF7DD /* TranslateDataManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TranslateDataManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		878733802ACE2D81005BF7DD /* TranslateDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateDataManagerTests.swift; sourceTree = "<group>"; };
+		878733982ACE2DD8005BF7DD /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		87EF287E2ACE39A4001E47CC /* TranslateServices.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TranslateServices.xcodeproj; path = ../../../TranslateServices/TranslateServices.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87EF28992ACE3A44001E47CC /* TranslateServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +90,7 @@
 				878733732ACE2D81005BF7DD /* TranslateDataManager */,
 				8787337F2ACE2D81005BF7DD /* TranslateDataManagerTests */,
 				878733722ACE2D81005BF7DD /* Products */,
+				87EF28982ACE3A44001E47CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,8 +106,10 @@
 		878733732ACE2D81005BF7DD /* TranslateDataManager */ = {
 			isa = PBXGroup;
 			children = (
+				878733AF2ACE2F74005BF7DD /* Dependencies */,
 				878733742ACE2D81005BF7DD /* TranslateDataManager.h */,
 				878733752ACE2D81005BF7DD /* TranslateDataManager.docc */,
+				878733982ACE2DD8005BF7DD /* UserViewModel.swift */,
 			);
 			path = TranslateDataManager;
 			sourceTree = "<group>";
@@ -83,6 +120,30 @@
 				878733802ACE2D81005BF7DD /* TranslateDataManagerTests.swift */,
 			);
 			path = TranslateDataManagerTests;
+			sourceTree = "<group>";
+		};
+		878733AF2ACE2F74005BF7DD /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				87EF287E2ACE39A4001E47CC /* TranslateServices.xcodeproj */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		87EF287F2ACE39A4001E47CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87EF28842ACE39A4001E47CC /* TranslateServices.framework */,
+				87EF28862ACE39A4001E47CC /* TranslateServicesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87EF28982ACE3A44001E47CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,6 +168,7 @@
 				8787336D2ACE2D81005BF7DD /* Sources */,
 				8787336E2ACE2D81005BF7DD /* Frameworks */,
 				8787336F2ACE2D81005BF7DD /* Resources */,
+				87EF289B2ACE3A44001E47CC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,6 +226,12 @@
 			mainGroup = 878733672ACE2D81005BF7DD;
 			productRefGroup = 878733722ACE2D81005BF7DD /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 87EF287F2ACE39A4001E47CC /* Products */;
+					ProjectRef = 87EF287E2ACE39A4001E47CC /* TranslateServices.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				878733702ACE2D81005BF7DD /* TranslateDataManager */,
@@ -171,6 +239,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		87EF28842ACE39A4001E47CC /* TranslateServices.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TranslateServices.framework;
+			remoteRef = 87EF28832ACE39A4001E47CC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		87EF28862ACE39A4001E47CC /* TranslateServicesTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TranslateServicesTests.xctest;
+			remoteRef = 87EF28852ACE39A4001E47CC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8787336F2ACE2D81005BF7DD /* Resources */ = {
@@ -195,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				878733762ACE2D81005BF7DD /* TranslateDataManager.docc in Sources */,
+				878733992ACE2DD8005BF7DD /* UserViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +488,7 @@
 		878733892ACE2D81005BF7DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q5893ZTFCF;
@@ -418,6 +505,7 @@
 		8787338A2ACE2D81005BF7DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q5893ZTFCF;
